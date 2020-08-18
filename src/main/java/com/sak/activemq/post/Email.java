@@ -12,8 +12,14 @@ import lombok.ToString;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Email {
 
     private String to;
     private String body;
+
+    @Override
+    public String toString() {
+        return String.format("Email{to=%s, body=%s}", getTo(), getBody());
+    }
 }
